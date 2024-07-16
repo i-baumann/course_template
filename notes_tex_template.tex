@@ -1,0 +1,71 @@
+%%%%%%%%%%
+% COURSE-SPECIFIC INFORMATION
+%%%%%%%%%%
+
+% Edit these as-needed: these commands can be included in any TeX file in the directory
+
+\newcommand{\name}{Isaac Baumann}
+\newcommand{\email}{dbaum@uic.edu}
+\newcommand{\classnum}{ECON 101}
+\newcommand{\subject}{Principles of Microeconomics}
+\newcommand{\instructors}{Dr. Johnson}
+\newcommand{\semester}{Fall 2024}
+
+%%%%%%%%%%
+% PREAMBLE
+%%%%%%%%%%
+
+% Primary packages
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+\usepackage{tcolorbox}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=blue,
+    linkcolor=black,
+    urlcolor=blue
+}
+\usepackage{siunitx}
+
+% Secondary packages: add/remove as needed
+\usepackage{tikz}
+    \usetikzlibrary{calc, patterns, angles, quotes, arrows.meta}
+\usepackage{pgfplots}
+\usepackage{multicol}				% Use multiple columns
+    \columnsep=20pt				% Set space between columns in points
+\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+\usepackage[toc,page]{appendix}
+\usepackage{siunitx}
+\usepackage{arydshln}
+
+% Set header formatting
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\fancyhead[L]{\leftmark}
+\fancyhead[R]{\classnum}
+\cfoot{\thepage}
+
+% Define new commands
+
+% norm bars
+\usepackage{mathtools} % for "\DeclarePairedDelimiter" macro
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+\newcommand{\numpy}{{\tt numpy}}    % tt font for numpy
+
+% Bars in matrices
+\newcommand*{\vertbar}{\rule[-1ex]{0.5pt}{3ex}}
+\newcommand*{\horzbar}{\rule[.5ex]{2.5ex}{0.5pt}}
+
+% Remove algorithm numbering
+\renewcommand{\thealgocf}{}
+
+% Define ``rotated'' ddots
+\def\rddots{\cdot^{\cdot^{\cdot}}}
