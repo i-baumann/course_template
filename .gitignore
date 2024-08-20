@@ -2,6 +2,9 @@
 # General files and directories
 
 *.pdf
+!admin/*.pdf
+
+.DS_Store
 
 ####################
 # R
