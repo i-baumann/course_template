@@ -16,15 +16,37 @@
 %%%%%%%%%%
 
 % Primary packages
+\usepackage{fullpage}
 \usepackage{enumitem}
-\usepackage{amsmath}
+\usepackage{amsfonts, amssymb, amsmath,amsthm}
+\usepackage{mathtools}
+\usepackage[pdftex, pdfauthor={\name}, pdftitle={\classnum~\assignment}]{hyperref}
 \usepackage[dvipsnames]{xcolor}
-\usepackage{amssymb}
-\usepackage{fancyhdr}
-\usepackage{tcolorbox}
+\usepackage{bbm}
 \usepackage{graphicx}
+\usepackage{mathrsfs}
+\usepackage{pdfpages}
+\usepackage{tabularx}
+\usepackage{pdflscape}
+\usepackage{makecell}
+\usepackage{booktabs}
+\usepackage{natbib}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{physics}
+\usepackage[many]{tcolorbox}
+\usepackage{version}
+\usepackage{ifthen}
+\usepackage{cancel}
+\usepackage{listings}
+\usepackage{courier}
+\usepackage{multicol}
+\usepackage{bm}
+\usepackage{rotating}
+
+\usepackage{tikz}
+\usepackage{istgame}
 \usepackage{float}
-\usepackage{hyperref}
 \hypersetup{
     colorlinks,
     citecolor=black,
@@ -69,3 +91,16 @@
 
 % Define ``rotated'' ddots
 \def\rddots{\cdot^{\cdot^{\cdot}}}
+
+% Define custom functions
+\let\vec\mathbf
+% \newcommand{\rank}{\text{Rank}}
+\newcommand{\expt}{\mathbb{E}}
+\newcommand{\variance}{\text{Var}}
+\newcommand{\cov}{\text{Cov}}
+\newcommand{\corr}{\text{Corr}}
+\newcommand{\exptfn}[1]{\mathbb{E}\left[{#1}\right]}
+\newcommand{\varfn}[1]{\text{Var}\left({#1}\right)}
+\newcommand{\covfn}[1]{\text{Cov}\left({#1}\right)}
+\newcommand{\plim}{\text{plim }}
+\let\vec\mathbf
