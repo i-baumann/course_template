@@ -1,3 +1,6 @@
+% Review template preamble file
+% Based on Paolo Adajar's template: https://github.com/padajar/paolo-pset/tree/main
+
 %%%%%%%%%%
 % COURSE-SPECIFIC INFORMATION
 %%%%%%%%%%
@@ -21,14 +24,14 @@
 \renewcommand*\familydefault{\sfdefault}
 
 % Primary packages
+\usepackage{lipsum}
+
 \usepackage{enumitem}
 \usepackage{amsmath}
 \usepackage[dvipsnames]{xcolor}
 \usepackage{amssymb}
 \usepackage{fancyhdr}
 \usepackage{tcolorbox}
-\usepackage{graphicx}
-\usepackage{float}
 \usepackage{hyperref}
 \hypersetup{
     colorlinks,
@@ -48,7 +51,6 @@
 \usepackage[linesnumbered,ruled,vlined]{algorithm2e}
 \usepackage[toc,page]{appendix}
 \usepackage{siunitx}
-\usepackage{arydshln}
 
 % Set header formatting
 \pagestyle{fancy}
@@ -58,32 +60,19 @@
 \fancyhead[R]{\classnum}
 \cfoot{\thepage}
 
-% Define new commands
-
-% norm bars
-\usepackage{mathtools} % for "\DeclarePairedDelimiter" macro
-\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
-\newcommand{\numpy}{{\tt numpy}}    % tt font for numpy
-
-% Bars in matrices
-\newcommand*{\vertbar}{\rule[-1ex]{0.5pt}{3ex}}
-\newcommand*{\horzbar}{\rule[.5ex]{2.5ex}{0.5pt}}
-
-% Remove algorithm numbering
-\renewcommand{\thealgocf}{}
-
-% Define ``rotated'' ddots
-\def\rddots{\cdot^{\cdot^{\cdot}}}
-
-% Define custom functions
+% Custom functions
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
 \let\vec\mathbf
 % \newcommand{\rank}{\text{Rank}}
-\newcommand{\expt}{\mathbb{E}}
-\newcommand{\variance}{\text{Var}}
-\newcommand{\cov}{\text{Cov}}
 \newcommand{\corr}{\text{Corr}}
+% \newcommand{\tr}{\text{tr}}
+\newcommand{\plimtxt}{\text{plim }}
+\newcommand{\plim}{\xrightarrow{\text{p}}}
+\newcommand{\dconv}{\xrightarrow{\text{d}}}
 \newcommand{\exptfn}[1]{\mathbb{E}\left[{#1}\right]}
 \newcommand{\varfn}[1]{\text{Var}\left({#1}\right)}
 \newcommand{\covfn}[1]{\text{Cov}\left({#1}\right)}
-\newcommand{\plim}{\text{plim }}
-\let\vec\mathbf
+\newcommand{\indep}{\perp \!\!\! \perp}
+
+% Comment block
+\newcommand{\commentblock}[1]{}

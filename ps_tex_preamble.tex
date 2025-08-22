@@ -18,6 +18,11 @@
 % PREAMBLE
 %%%%%%%%%%
 
+% Font setting
+\usepackage{sansmathfonts}
+\usepackage[T1]{fontenc}
+\renewcommand*\familydefault{\sfdefault}
+
 \usepackage{fullpage}
 \usepackage{enumitem}
 \usepackage{amsfonts, amssymb, amsmath,amsthm}
@@ -200,12 +205,9 @@
 % Custom functions
 \newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
 \let\vec\mathbf
-\newcommand{\rank}{\text{Rank}}
-\newcommand{\expt}{\mathbb{E}}
-\newcommand{\var}{\text{Var}}
-\newcommand{\cov}{\text{Cov}}
+% \newcommand{\rank}{\text{Rank}}
 \newcommand{\corr}{\text{Corr}}
-\newcommand{\tr}{\text{tr}}
+% \newcommand{\tr}{\text{tr}}
 \newcommand{\plimtxt}{\text{plim }}
 \newcommand{\plim}{\xrightarrow{\text{p}}}
 \newcommand{\dconv}{\xrightarrow{\text{d}}}
