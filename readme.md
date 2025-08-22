@@ -4,6 +4,6 @@ A template repository for new courses, geared toward economics courses. The temp
 
 ### LaTeX
 
-I primarily use VSCodium to manage course content. Installing a LaTeX distribution and configuring it to be used in VSCode is covered [here](https://mathjiajia.github.io/vscode-and-latex/).
+I primarily use VSCodium to manage course content. Installing a LaTeX distribution and configuring it to be used in VSCode/VSCodium is covered [here](https://mathjiajia.github.io/vscode-and-latex/).
 
 The preambles includes several custom functions for statistical expressions, which may be useful for econometrics and statistics courses.
