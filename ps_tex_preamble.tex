@@ -196,3 +196,35 @@
 %	title=\lstname,                   % show the filename of files included with \lstinputlisting; also try caption instead of title
 	xleftmargin=0.25cm
 }
+
+% Custom functions
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+\let\vec\mathbf
+\newcommand{\rank}{\text{Rank}}
+\newcommand{\expt}{\mathbb{E}}
+\newcommand{\var}{\text{Var}}
+\newcommand{\cov}{\text{Cov}}
+\newcommand{\corr}{\text{Corr}}
+\newcommand{\tr}{\text{tr}}
+\newcommand{\plimtxt}{\text{plim }}
+\newcommand{\plim}{\xrightarrow{\text{p}}}
+\newcommand{\dconv}{\xrightarrow{\text{d}}}
+\newcommand{\exptfn}[1]{\mathbb{E}\left[{#1}\right]}
+\newcommand{\varfn}[1]{\text{Var}\left({#1}\right)}
+\newcommand{\covfn}[1]{\text{Cov}\left({#1}\right)}
+\newcommand{\indep}{\perp \!\!\! \perp}
+
+% Comment block
+\newcommand{\commentblock}[1]{}
+
+% Preample items for tinytable output
+\usepackage{tabularray}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{codehigh}
+\usepackage[normalem]{ulem}
+\UseTblrLibrary{booktabs}
+\UseTblrLibrary{siunitx}
+\newcommand{\tinytableTabularrayUnderline}[1]{\underline{#1}}
+\newcommand{\tinytableTabularrayStrikeout}[1]{\sout{#1}}
+\NewTableCommand{\tinytableDefineColor}[3]{\definecolor{#1}{#2}{#3}}
