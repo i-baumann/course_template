@@ -1,9 +1,13 @@
-# Course Repsository Template
+# Course Repository Template
 
-A template repository for new courses, geared toward economics courses. The template TeX files are heavily based on Paolo Adajar's course templates (this repo is based on their [original repo](https://github.com/padajar/paolo-pset/tree/main) although they have [updated templates](https://github.com/padajar/padajar-templates/tree/main)).
+A template repository for new courses, geared toward economics courses. The template TeX files are heavily based on [Paolo Adajar's templates](https://github.com/padajar/padajar-templates/tree/main). My versions are meant to be more bare-bones than theirs, with fewer features and less personalization.
 
-### LaTeX
+## LaTeX
 
-I primarily use VSCodium to manage course content. Installing a LaTeX distribution and configuring it to be used in VSCode/VSCodium is covered [here](https://mathjiajia.github.io/vscode-and-latex/).
+I primarily use VSCodium and TeXLive to manage and write course content. Installing a LaTeX distribution and configuring it to be used in VSCode/VSCodium is covered well [here](https://mathjiajia.github.io/vscode-and-latex/).
 
-The preambles includes several custom functions for statistical expressions, which may be useful for econometrics and statistics courses.
+### Custom Package + Classes
+
+The templates in this repo use a custom LaTeX package and custom classes. These include several custom functions for statistical expressions, which may be useful for econometrics and statistics courses. Here's me saying "custom" one more time for good measure. Did I mention these are custom?
+
+To install, copy the package (.sty) and class (.cls) files in the root directory of this repo to wherever your LaTeX installation places packages and classes. Try looking at the .log file of a compiled LaTeX document to find this location. Once you've placed your .sty and .cls files there run a quick `sudo texhash` (if you're on a Unix-like machine) to refresh your TeX libraries.

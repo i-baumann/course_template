@@ -1,57 +1,42 @@
-% Problem set template preamble file
-% Based on Paolo Adajar's template: https://github.com/padajar/paolo-pset/tree/main
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{template_defaults}[Course template package]
 
-%%%%%%%%%%
-% COURSE-SPECIFIC INFORMATION
-%%%%%%%%%%
+%%%%%
+% Common packages across templates
 
-% Edit these as-needed: these commands can be included in any TeX file in the directory
+\RequirePackage{enumitem}
+\RequirePackage{amsfonts, amssymb, amsmath, amsthm}
+\RequirePackage{mathtools}
+\RequirePackage{hyperref}
+\RequirePackage[dvipsnames]{xcolor}
+\RequirePackage{bbm}
+\RequirePackage{graphicx}
+\RequirePackage{mathrsfs}
+\RequirePackage{pdfpages}
+\RequirePackage{tabularx}
+\RequirePackage{pdflscape}
+\RequirePackage{makecell}
+\RequirePackage{booktabs}
+\RequirePackage{natbib}
+\RequirePackage{caption}
+\RequirePackage{subcaption}
+\RequirePackage{physics}
+\RequirePackage[many]{tcolorbox}
+\RequirePackage{version}
+\RequirePackage{ifthen}
+\RequirePackage{cancel}
+\RequirePackage{listings}
+\RequirePackage{courier}
+\RequirePackage[linesnumbered,ruled,vlined]{algorithm2e}
 
-\newcommand{\name}{Isaac Baumann}
-\newcommand{\email}{dbaum@uic.edu}
-\newcommand{\classnum}{ECON 101}
-\newcommand{\subject}{Principles of Microeconomics}
-\newcommand{\instructors}{Dr. Johnson}
-\newcommand{\semester}{Fall 2024}
+\RequirePackage{tikz}
+\RequirePackage{istgame}
+\RequirePackage{float}
 
-%%%%%%%%%%
-% PREAMBLE
-%%%%%%%%%%
+%%%%%
+% Typesetting: common settings
 
-% Font setting
-\usepackage{sansmathfonts}
-\usepackage[T1]{fontenc}
-\renewcommand*\familydefault{\sfdefault}
-
-\usepackage{fullpage}
-\usepackage{enumitem}
-\usepackage{amsfonts, amssymb, amsmath,amsthm}
-\usepackage{mathtools}
-\usepackage[pdftex, pdfauthor={\name}, pdftitle={\classnum~\assignment}]{hyperref}
-\usepackage[dvipsnames]{xcolor}
-\usepackage{bbm}
-\usepackage{graphicx}
-\usepackage{mathrsfs}
-\usepackage{pdfpages}
-\usepackage{tabularx}
-\usepackage{pdflscape}
-\usepackage{makecell}
-\usepackage{booktabs}
-\usepackage{natbib}
-\usepackage{caption}
-\usepackage{subcaption}
-\usepackage{physics}
-\usepackage[many]{tcolorbox}
-\usepackage{version}
-\usepackage{ifthen}
-\usepackage{cancel}
-\usepackage{listings}
-\usepackage{courier}
-
-\usepackage{tikz}
-\usepackage{istgame}
-\usepackage{float}
-
+% Hyperlink coloring
 \hypersetup{
 	colorlinks=true,
 	linkcolor=blue,
@@ -59,79 +44,19 @@
 	urlcolor=blue,
 }
 
-\setlength{\parindent}{0mm}
+% Paragraph/indent spacing
+\setlength{\parindent}{2mm}
 \setlength{\parskip}{2mm}
 
-% \setlist[enumerate]{label=({\alph*})}
-% \setlist[enumerate, 2]{label=({\roman*})}
+% Common font setting across templates
+\RequirePackage{cmbright}
+\RequirePackage[T1]{fontenc}
 
-\allowdisplaybreaks[1]
+%%%%%
+% Programming language settings
 
-\newcommand{\psetheader}{
-	\ifthenelse{\isundefined{\collaborators}}{
-		\begin{center}
-			{\setlength{\parindent}{0cm} \setlength{\parskip}{0mm}
-				
-				{\textbf{\classnum~\semester:~\assignment} \hfill \name}
-				
-				\subject \hfill \href{mailto:\email}{\tt \email}
-				
-				Instructor(s):~\instructors \hfill Due date:~\duedate	
-				
-				\hrulefill}
-		\end{center}
-	}{
-		\begin{center}
-			{\setlength{\parindent}{0cm} \setlength{\parskip}{0mm}
-				
-				{\textbf{\classnum~\semester:~\assignment} \hfill \name\footnote{Collaborator(s): \collaborators}}
-				
-				\subject \hfill \href{mailto:\email}{\tt \email}
-				
-				Instructor(s):~\instructors \hfill Due Date:~\duedate	
-				
-				\hrulefill}
-		\end{center}
-	}
-}
-
-\renewcommand{\thepage}{\classnum~\assignment \hfill \arabic{page}}
-
-\makeatletter
-\def\points{\@ifnextchar[{\@with}{\@without}}
-\def\@with[#1]#2{{\ifthenelse{\equal{#2}{1}}{{[1 point, #1]}}{{[#2 points, #1]}}}}
-\def\@without#1{\ifthenelse{\equal{#1}{1}}{{[1 point]}}{{[#1 points]}}}
-\makeatother
-
-\newtheoremstyle{theorem-custom}%
-{}{}%
-{}{}%
-{\itshape}{.}%
-{ }%
-{\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}}
-
-\theoremstyle{theorem-custom}
-
-\newtheorem{theorem}{Theorem}
-\newtheorem{lemma}[theorem]{Lemma}
-\newtheorem{example}[theorem]{Example}
-
-\newenvironment{problem}[1]{\color{blue} #1}{}
-
-\newenvironment{solution}[1]{\color{black} #1}{}
-
-% \newenvironment{solution}{%
-%	\leavevmode\begin{tcolorbox}[breakable, colback=green!5!white,colframe=green!75!black, enhanced jigsaw] \proof[\scshape Solution:] \setlength{\parskip}{2mm}%
-%	}{\renewcommand{\qedsymbol}{$\blacksquare$} \endproof \end{tcolorbox}}
-
-\newenvironment{reflection}{\begin{tcolorbox}[breakable, colback=black!8!white,colframe=black!60!white, enhanced jigsaw, parbox = false]\textsc{Reflections:}}{\end{tcolorbox}}
-
-\newcommand{\qedh}{\renewcommand{\qedsymbol}{$\blacksquare$}\qedhere}
-
-\definecolor{mygreen}{rgb}{0,0.6,0}
-\definecolor{mygray}{rgb}{0.5,0.5,0.5}
-\definecolor{mymauve}{rgb}{0.58,0,0.82}
-
+% Stata command highlighting
+% (Not really in use since I don't prefer to use Stata)
 % from https://github.com/satejsoman/stata-lstlisting
 % language definition
 \lstdefinelanguage{Stata}{
@@ -173,7 +98,7 @@
 }
 
 \lstset{ 
-	backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
+	backgroundcolor=\color{white},   % choose the background color; you must add \RequirePackage{color} or \RequirePackage{xcolor}; should come as last argument
 	basicstyle=\footnotesize\ttfamily,        % the size of the fonts that are used for the code
 	breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
 	breaklines=true,                 % sets automatic line breaking
@@ -202,7 +127,10 @@
 	xleftmargin=0.25cm
 }
 
+%%%%%
 % Custom functions
+
+% Math stuff
 \newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
 \let\vec\mathbf
 % \newcommand{\rank}{\text{Rank}}
@@ -216,7 +144,7 @@
 \newcommand{\covfn}[1]{\text{Cov}\left({#1}\right)}
 \newcommand{\indep}{\perp \!\!\! \perp}
 
-% Comment block
+% Comment block (for convenience)
 \newcommand{\commentblock}[1]{}
 
 % Preample items for tinytable output
@@ -230,3 +158,13 @@
 \newcommand{\tinytableTabularrayUnderline}[1]{\underline{#1}}
 \newcommand{\tinytableTabularrayStrikeout}[1]{\sout{#1}}
 \NewTableCommand{\tinytableDefineColor}[3]{\definecolor{#1}{#2}{#3}}
+
+% Bars in matrices
+\newcommand*{\vertbar}{\rule[-1ex]{0.5pt}{3ex}}
+\newcommand*{\horzbar}{\rule[.5ex]{2.5ex}{0.5pt}}
+
+% Remove algorithm numbering
+\renewcommand{\thealgocf}{}
+
+% Define ``rotated'' ddots
+\def\rddots{\cdot^{\cdot^{\cdot}}}
