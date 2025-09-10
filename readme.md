@@ -1,6 +1,6 @@
 # Course Repository Template
 
-A template repository for new courses, geared toward economics courses. The template TeX files are heavily based on [Paolo Adajar's templates](https://github.com/padajar/padajar-templates/tree/main). My versions are meant to be more bare-bones than theirs, with fewer features and less personalization.
+A template repository for new courses, geared toward economics courses. The template TeX files are heavily based on [Phi Adajar's templates](https://github.com/padajar/padajar-templates/tree/main). My versions are meant to be more bare-bones than theirs, with fewer features and less personalization.
 
 ## LaTeX
 
