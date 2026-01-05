@@ -12,8 +12,8 @@ The templates in this repo use a custom LaTeX package and custom classes. These 
 
 To install, copy the package (.sty) and class (.cls) files in the root directory of this repo to wherever your LaTeX installation places packages and classes. Try looking at the .log file of a compiled LaTeX document to find this location. Once you've placed your .sty and .cls files there run a quick `sudo texhash` (if you're on a Unix-like machine) to refresh your TeX libraries.
 
-### Linting
+### Hooks and Linting
 
-This branch of the template repo contains pre-commit linters that lint R, R-related, and LaTeX files. If you do not wish to use these linters, please use the main branch in this repo. To use the linters in this branch you will need to install [`pre-commit`](https://pre-commit.com/) and [`jarl`](https://jarl.etiennebacher.com/). 
+This template repo contains pre-commit hooks to deploy linters that lint R, R-related, and LaTeX files. To use these linters you will need to install [`pre-commit`](https://pre-commit.com/) and [`jarl`](https://jarl.etiennebacher.com/). Check `.pre-commit-config.yaml` for details about what pre-commit hooks are deployed and their options.
 
-Per this repo's license, feel free to customize the pre-commit hooks in whatever way meets your needs.
+The hooks in this template are designed to meet my own workflows and preferences and may change over time. Per this repo's license, feel free to customize the hooks in whatever way meets your needs. Or disable them entirely if you'd prefer not to use them.
