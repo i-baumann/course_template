@@ -1,17 +1,26 @@
 ####################
 # General files and directories
-
+*.HEIC
+*.csv
+*.docx
+*.dta
+*.duckdb
 *.pdf
+*.png
+*.pptx
+*.rda
+*.rds
+*.xlsx
+*.zip
+.DS_Store
+/inst
 !admin/*.pdf
 
-.DS_Store
-
-####################
 # R
 
 # History files
-.Rhistory
 .Rapp.history
+.Rhistory
 
 # Session Data files
 .RData
@@ -44,8 +53,8 @@ vignettes/*.pdf
 /cache/
 
 # Temporary files created by R markdown
-*.utf8.md
 *.knit.md
+*.utf8.md
 
 # R Environment Variables
 .Renviron
@@ -59,27 +68,26 @@ po/*~
 # RStudio Connect folder
 rsconnect/
 
-####################
 # TeX
 
 # Core latex/pdflatex auxiliary files:
 *.aux
+*.cb
+*.cb2
+*.fls
+*.fmt
+*.fot
 *.lof
 *.log
 *.lot
-*.fls
 *.out
 *.toc
-*.fmt
-*.fot
-*.cb
-*.cb2
 .*.lb
 
 # Intermediate documents:
+*-converted-to.*
 *.dvi
 *.xdv
-*-converted-to.*
 # these rules might exclude image files for figures etc.
 # *.ps
 # *.eps
@@ -89,20 +97,20 @@ rsconnect/
 .pdf
 
 ## Bibliography auxiliary files (bibtex/biblatex/biber):
+*-blx.aux
+*-blx.bib
 *.bbl
 *.bcf
 *.blg
-*-blx.aux
-*-blx.bib
 *.run.xml
 
 # Build tool auxiliary files:
 *.fdb_latexmk
+*.pdfsync
 *.synctex
 *.synctex(busy)
 *.synctex.gz
 *.synctex.gz(busy)
-*.pdfsync
 
 # Build tool directories for auxiliary files
 # latexrun
@@ -151,13 +159,12 @@ acs-*.bib
 *.tfm
 
 #(r)(e)ledmac/(r)(e)ledpar
-*.end
 *.?end
 *.[1-9]
-*.[1-9][0-9]
-*.[1-9][0-9][0-9]
 *.[1-9]R
+*.[1-9][0-9]
 *.[1-9][0-9]R
+*.[1-9][0-9][0-9]
 *.[1-9][0-9][0-9]R
 *.eledsec[1-9]
 *.eledsec[1-9]R
@@ -165,6 +172,7 @@ acs-*.bib
 *.eledsec[1-9][0-9]R
 *.eledsec[1-9][0-9][0-9]
 *.eledsec[1-9][0-9][0-9]R
+*.end
 
 # glossaries
 *.acn
@@ -200,8 +208,8 @@ acs-*.bib
 # knitr
 *-concordance.tex
 # TODO Comment the next line if you want to keep your tikz graphics files
-*.tikz
 *-tikzDictionary
+*.tikz
 
 # listings
 *.lol
@@ -224,8 +232,8 @@ acs-*.bib
 *.stc[0-9]*
 
 # minted
-_minted*
 *.pyg
+_minted*
 
 # morewrites
 *.mw
@@ -242,8 +250,8 @@ _minted*
 *.pdfpc
 
 # sagetex
-*.sagetex.sage
 *.sagetex.py
+*.sagetex.sage
 *.sagetex.scmd
 
 # scrwfile
@@ -269,9 +277,9 @@ pythontex-files-*/
 *.loe
 
 # TikZ & PGF
+*.auxlock
 *.dpth
 *.md5
-*.auxlock
 
 # todonotes
 *.tdo
@@ -297,8 +305,8 @@ pythontex-files-*/
 *.xyd
 
 # endfloat
-*.ttt
 *.fff
+*.ttt
 
 # Latexian
 TSWLatexianTemp*
@@ -327,8 +335,8 @@ TSWLatexianTemp*
 *.tps
 
 # auto folder when using emacs and auctex
-./auto/*
 *.el
+./auto/*
 
 # expex forward references with \gathertags
 *-tags.tex
