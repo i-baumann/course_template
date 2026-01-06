@@ -16,4 +16,4 @@ To install, copy the package (.sty) and class (.cls) files in the root directory
 
 This template repo contains pre-commit hooks to deploy linters that lint R, R-related, and LaTeX files. To use these linters you will need to install [`pre-commit`](https://pre-commit.com/) and [`jarl`](https://jarl.etiennebacher.com/). Check `.pre-commit-config.yaml` for details about what pre-commit hooks are deployed and their options.
 
-The hooks in this template are designed to meet my own workflows and preferences and may change over time. Per this repo's license, feel free to customize the hooks in whatever way meets your needs. Or disable them entirely if you'd prefer not to use them.
+The hooks in this template are designed to meet my own workflows and preferences and may change over time. Per this repo's license, feel free to customize the hooks in whatever way meets your needs. Or disable them entirely if you'd prefer not to use them. Run `pre-commit install` in terminal to install the hooks in the repo each time you use this template, if you want to use the hooks.
