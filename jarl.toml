@@ -1,0 +1,8 @@
+[lint]
+ignore = ["vector_logic"]
+
+[lint.duplicated_arguments]
+skipped-functions = ["list", "c", "mutate", "summarize", "transmute"]
+
+[lint.implicit_assignment]
+skipped-functions = ["list", "expect_error", "expect_warning", "expect_message", "expect_snapshot", "quote", "suppressMessages", "suppressWarnings"]
